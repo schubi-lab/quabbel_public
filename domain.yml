@@ -21,6 +21,8 @@ intents:
     use_entities: true
 - room_challenge:
     use_entities: true
+- a_Gebaeude_challenge:
+    use_entities: true
 entities: []
 slots: {}
 responses:
@@ -37,8 +39,16 @@ responses:
   - text: Bye
   utter_iamabot:
   - text: I am a bot, powered by Rasa.
-  utter_room_plan:
-  - text: 'Hier ist der Raumplan der FOM: https://campus.bildungscentrum.de/nfcampus/dc/2588/2016_OD_RaumplaeneFOMMuenchen.pdf'
+  utter_gebaeude:
+  - buttons:
+    - payload: H-Gebaeude
+      title: H-Gebäude
+    - payload: A-Gebaeude
+      title: A-Gebäude
+    text: In welchem Gebäude ist der Raum?
+  utter_gebaeude_a:
+  - image: http://192.168.178.64:8080/FOM_A_Erdgeschoss.PNG
+    text: Hier ist ein Raumplan :)
 actions: []
 forms: {}
 e2e_actions: []

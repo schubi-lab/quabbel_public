@@ -24,7 +24,11 @@ stories:
   - action: utter_did_that_help
   - intent: deny
   - action: utter_goodbye
-- story: Story from Conversation ID 3b1102fe5f5e4c7fb18f07cedb49ac90
+- story: Welches Gebaeude
   steps:
   - intent: room_challenge
-  - action: utter_room_plan
+  - action: utter_gebaeude
+- story: Gebaeude A
+  steps:
+  - intent: a_Gebaeude_challenge
+  - action: utter_gebaeude_a
