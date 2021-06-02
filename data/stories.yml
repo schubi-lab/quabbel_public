@@ -32,3 +32,33 @@ stories:
   steps:
   - intent: a_Gebaeude_challenge
   - action: utter_gebaeude_a
+- story: Story from Conversation ID ff1697c3434049f2989bc43829e98af4
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: room_challenge
+  - action: utter_gebaeude
+  - intent: a_Gebaeude_challenge
+  - action: utter_gebaeude_a
+- story: Witz
+  steps:
+  - intent: witz_challenge
+  - action: utter_witz
+- story: Story from Conversation ID d86773f2fb86470d893ee5b16688599b
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: witz_challenge
+  - action: utter_witz
+- story: Story from Conversation ID 51f4894a007640fda0c94a5696a5464a
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: bot_challenge
+  - action: utter_iamabot
+  - intent: room_challenge
+  - action: utter_gebaeude
+  - intent: a_Gebaeude_challenge
+  - action: utter_gebaeude_a
+  - intent: witz_challenge
+  - action: utter_witz

@@ -49,6 +49,7 @@ nlu:
     - don't like that
     - no way
     - not really
+    - Danke
 - intent: mood_great
   examples: |
     - perfect
@@ -94,9 +95,16 @@ nlu:
     - Ich suche einen Raum
     - Wo ist der Raum?
     - Raum
+    - Raumsuche
+    - Hallo ich suche einen Raum
 - intent: a_Gebaeude_challenge
   examples: |
     - A Gebaeude
     - Im a Gebäude
     - A-Gebäude
     - A-Gebaeude
+- intent: witz_challenge
+  examples: |
+    - Erzähle mir einen Witz.
+    - Witz
+    - Erzähl mir mal nen Joke.
