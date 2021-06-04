@@ -90,6 +90,7 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+    - Bist du ein Bot
 - intent: room_challenge
   examples: |
     - Ich suche einen Raum
@@ -103,8 +104,16 @@ nlu:
     - Im a Gebäude
     - A-Gebäude
     - A-Gebaeude
+    - Raum A
+    - Raum A01
+    - A10
+    - Ich suche Raum A01
 - intent: witz_challenge
   examples: |
     - Erzähle mir einen Witz.
     - Witz
     - Erzähl mir mal nen Joke.
+    - Kannst du mir nen Witz erzählen?
+    - Kannst du mir einen Witz erzählen?
+    - Erzähl mir einen Witz
+    - Erzähl mir nen Witz

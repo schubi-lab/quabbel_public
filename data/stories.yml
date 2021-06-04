@@ -62,3 +62,7 @@ stories:
   - action: utter_gebaeude_a
   - intent: witz_challenge
   - action: utter_witz
+- story: Story from Conversation ID ce7b7eb44eef4b7ead6ea80cc07a89d1
+  steps:
+  - intent: room_challenge
+  - action: utter_gebaeude_a
