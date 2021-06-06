@@ -1,22 +1,12 @@
 {
-  "greet": {
-    "precision": 0.7333333333333333,
-    "recall": 0.7857142857142857,
-    "f1-score": 0.7586206896551724,
-    "support": 14,
+  "mood_unhappy": {
+    "precision": 0.7222222222222222,
+    "recall": 0.8125,
+    "f1-score": 0.7647058823529411,
+    "support": 16,
     "confused_with": {
-      "mood_great": 1,
+      "mood_great": 2,
       "goodbye": 1
-    }
-  },
-  "goodbye": {
-    "precision": 0.7,
-    "recall": 0.6363636363636364,
-    "f1-score": 0.6666666666666666,
-    "support": 11,
-    "confused_with": {
-      "greet": 2,
-      "mood_great": 1
     }
   },
   "mood_great": {
@@ -25,25 +15,51 @@
     "f1-score": 0.5925925925925927,
     "support": 14,
     "confused_with": {
-      "mood_unhappy": 3,
-      "deny": 2
+      "mood_unhappy": 2,
+      "greet": 2
     }
   },
-  "mood_unhappy": {
-    "precision": 0.7333333333333333,
-    "recall": 0.7333333333333333,
-    "f1-score": 0.7333333333333333,
-    "support": 15,
+  "room_challenge": {
+    "precision": 0.42857142857142855,
+    "recall": 0.6,
+    "f1-score": 0.5,
+    "support": 5,
     "confused_with": {
-      "deny": 2,
+      "bot_challenge": 1,
+      "a_Gebaeude_challenge": 1
+    }
+  },
+  "bot_challenge": {
+    "precision": 0.8,
+    "recall": 0.8,
+    "f1-score": 0.8000000000000002,
+    "support": 5,
+    "confused_with": {
+      "witz_challenge": 1
+    }
+  },
+  "goodbye": {
+    "precision": 0.6666666666666666,
+    "recall": 0.6666666666666666,
+    "f1-score": 0.6666666666666666,
+    "support": 12,
+    "confused_with": {
+      "mood_unhappy": 1,
       "mood_great": 1
     }
   },
+  "witz_challenge": {
+    "precision": 0.9,
+    "recall": 1.0,
+    "f1-score": 0.9473684210526316,
+    "support": 9,
+    "confused_with": {}
+  },
   "deny": {
-    "precision": 0.4166666666666667,
-    "recall": 0.7142857142857143,
-    "f1-score": 0.5263157894736842,
-    "support": 7,
+    "precision": 0.75,
+    "recall": 0.75,
+    "f1-score": 0.75,
+    "support": 8,
     "confused_with": {
       "mood_unhappy": 1,
       "greet": 1
@@ -55,21 +71,40 @@
     "f1-score": 0.4,
     "support": 7,
     "confused_with": {
-      "mood_great": 2,
-      "deny": 2
+      "goodbye": 2,
+      "mood_unhappy": 1
     }
   },
-  "accuracy": 0.6470588235294118,
+  "a_Gebaeude_challenge": {
+    "precision": 0.8571428571428571,
+    "recall": 0.75,
+    "f1-score": 0.7999999999999999,
+    "support": 8,
+    "confused_with": {
+      "room_challenge": 2
+    }
+  },
+  "greet": {
+    "precision": 0.75,
+    "recall": 0.8,
+    "f1-score": 0.7741935483870969,
+    "support": 15,
+    "confused_with": {
+      "room_challenge": 1,
+      "mood_great": 1
+    }
+  },
+  "accuracy": 0.7171717171717171,
   "macro avg": {
-    "precision": 0.6442307692307692,
-    "recall": 0.6211399711399711,
-    "f1-score": 0.6129215119535748,
-    "support": 68
+    "precision": 0.7156654456654457,
+    "recall": 0.7036309523809524,
+    "f1-score": 0.6995527111051929,
+    "support": 99
   },
   "weighted avg": {
-    "precision": 0.6641968325791855,
-    "recall": 0.6470588235294118,
-    "f1-score": 0.6431548501634975,
-    "support": 68
+    "precision": 0.7190667357334024,
+    "recall": 0.7171717171717171,
+    "f1-score": 0.7108162568608434,
+    "support": 99
   }
 }

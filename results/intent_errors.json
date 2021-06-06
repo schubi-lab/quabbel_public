@@ -1,42 +1,90 @@
 [
   {
-    "text": "indeed",
+    "text": "correct",
     "intent": "affirm",
     "intent_prediction": {
       "name": "mood_great",
-      "confidence": 0.9622069001197815
+      "confidence": 0.9990478157997131
     }
   },
   {
-    "text": "moin",
-    "intent": "greet",
+    "text": "wonderful",
+    "intent": "mood_great",
     "intent_prediction": {
-      "name": "deny",
-      "confidence": 0.8614984750747681
+      "name": "room_challenge",
+      "confidence": 0.44369104504585266
+    }
+  },
+  {
+    "text": "I am going to save the world",
+    "intent": "mood_great",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.4488745927810669
+    }
+  },
+  {
+    "text": "so good",
+    "intent": "mood_great",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.4431190490722656
     }
   },
   {
     "text": "good afternoon",
-    "intent": "greet",
+    "intent": "goodbye",
     "intent_prediction": {
-      "name": "goodbye",
-      "confidence": 0.9999997615814209
+      "name": "greet",
+      "confidence": 0.999958872795105
     }
   },
   {
-    "text": "of course",
-    "intent": "affirm",
+    "text": "have a nice day",
+    "intent": "goodbye",
     "intent_prediction": {
-      "name": "goodbye",
-      "confidence": 0.999447226524353
+      "name": "mood_unhappy",
+      "confidence": 0.9333615303039551
     }
   },
   {
     "text": "that sounds good",
     "intent": "affirm",
     "intent_prediction": {
-      "name": "deny",
-      "confidence": 0.9108901619911194
+      "name": "goodbye",
+      "confidence": 0.4372014105319977
+    }
+  },
+  {
+    "text": "extremely good",
+    "intent": "mood_great",
+    "intent_prediction": {
+      "name": "mood_unhappy",
+      "confidence": 0.830707311630249
+    }
+  },
+  {
+    "text": "Wo ist der Raum?",
+    "intent": "room_challenge",
+    "intent_prediction": {
+      "name": "bot_challenge",
+      "confidence": 0.6788089871406555
+    }
+  },
+  {
+    "text": "Hallo",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "room_challenge",
+      "confidence": 0.9300901889801025
+    }
+  },
+  {
+    "text": "indeed",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "mood_unhappy",
+      "confidence": 0.763518214225769
     }
   },
   {
@@ -44,47 +92,7 @@
     "intent": "deny",
     "intent_prediction": {
       "name": "greet",
-      "confidence": 0.9844611287117004
-    }
-  },
-  {
-    "text": "I don't feel very well",
-    "intent": "mood_unhappy",
-    "intent_prediction": {
-      "name": "deny",
-      "confidence": 0.6494572162628174
-    }
-  },
-  {
-    "text": "y",
-    "intent": "affirm",
-    "intent_prediction": {
-      "name": "deny",
-      "confidence": 0.9297001361846924
-    }
-  },
-  {
-    "text": "not really",
-    "intent": "deny",
-    "intent_prediction": {
-      "name": "mood_unhappy",
-      "confidence": 1.0
-    }
-  },
-  {
-    "text": "great",
-    "intent": "mood_great",
-    "intent_prediction": {
-      "name": "deny",
-      "confidence": 0.5126504302024841
-    }
-  },
-  {
-    "text": "I am great",
-    "intent": "mood_great",
-    "intent_prediction": {
-      "name": "mood_unhappy",
-      "confidence": 0.5623733401298523
+      "confidence": 0.6044949889183044
     }
   },
   {
@@ -92,15 +100,47 @@
     "intent": "mood_great",
     "intent_prediction": {
       "name": "mood_unhappy",
-      "confidence": 0.9999992847442627
+      "confidence": 0.9989961981773376
     }
   },
   {
-    "text": "unhappy",
+    "text": "I don't feel very well",
     "intent": "mood_unhappy",
     "intent_prediction": {
-      "name": "goodbye",
-      "confidence": 0.6072747707366943
+      "name": "mood_great",
+      "confidence": 0.44609901309013367
+    }
+  },
+  {
+    "text": "Raum A",
+    "intent": "a_Gebaeude_challenge",
+    "intent_prediction": {
+      "name": "room_challenge",
+      "confidence": 0.9756937026977539
+    }
+  },
+  {
+    "text": "y",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.5593430399894714
+    }
+  },
+  {
+    "text": "Bist du ein Bot",
+    "intent": "bot_challenge",
+    "intent_prediction": {
+      "name": "witz_challenge",
+      "confidence": 0.6562080383300781
+    }
+  },
+  {
+    "text": "Ich suche Raum A01",
+    "intent": "a_Gebaeude_challenge",
+    "intent_prediction": {
+      "name": "room_challenge",
+      "confidence": 0.5157459378242493
     }
   },
   {
@@ -108,15 +148,15 @@
     "intent": "greet",
     "intent_prediction": {
       "name": "mood_great",
-      "confidence": 0.720322847366333
+      "confidence": 0.5261343121528625
     }
   },
   {
     "text": "good afternoon",
-    "intent": "goodbye",
+    "intent": "greet",
     "intent_prediction": {
-      "name": "greet",
-      "confidence": 0.9999992847442627
+      "name": "goodbye",
+      "confidence": 0.9999147653579712
     }
   },
   {
@@ -124,63 +164,47 @@
     "intent": "goodbye",
     "intent_prediction": {
       "name": "affirm",
-      "confidence": 0.970271646976471
-    }
-  },
-  {
-    "text": "correct",
-    "intent": "affirm",
-    "intent_prediction": {
-      "name": "mood_great",
-      "confidence": 0.9999903440475464
-    }
-  },
-  {
-    "text": "extremely good",
-    "intent": "mood_great",
-    "intent_prediction": {
-      "name": "greet",
-      "confidence": 0.7936665415763855
+      "confidence": 0.9562524557113647
     }
   },
   {
     "text": "good night",
     "intent": "goodbye",
     "intent_prediction": {
-      "name": "greet",
-      "confidence": 0.8580464720726013
-    }
-  },
-  {
-    "text": "have a nice day",
-    "intent": "goodbye",
-    "intent_prediction": {
       "name": "mood_great",
-      "confidence": 0.9563090205192566
+      "confidence": 0.6221207976341248
     }
   },
   {
-    "text": "wonderful",
+    "text": "of course",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.5389801263809204
+    }
+  },
+  {
+    "text": "not really",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "mood_unhappy",
+      "confidence": 0.9995673298835754
+    }
+  },
+  {
+    "text": "great",
     "intent": "mood_great",
     "intent_prediction": {
       "name": "deny",
-      "confidence": 0.7698933482170105
-    }
-  },
-  {
-    "text": "so good",
-    "intent": "mood_great",
-    "intent_prediction": {
-      "name": "mood_unhappy",
-      "confidence": 0.9914996027946472
+      "confidence": 0.6611761450767517
     }
   },
   {
     "text": "my day was horrible",
     "intent": "mood_unhappy",
     "intent_prediction": {
-      "name": "deny",
-      "confidence": 0.9461085796356201
+      "name": "goodbye",
+      "confidence": 0.9458917379379272
     }
   },
   {
@@ -188,7 +212,15 @@
     "intent": "mood_unhappy",
     "intent_prediction": {
       "name": "mood_great",
-      "confidence": 0.6647305488586426
+      "confidence": 0.9456037878990173
+    }
+  },
+  {
+    "text": "Raum",
+    "intent": "room_challenge",
+    "intent_prediction": {
+      "name": "a_Gebaeude_challenge",
+      "confidence": 0.9973121881484985
     }
   }
 ]

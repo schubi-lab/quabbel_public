@@ -1,13 +1,24 @@
-language: en
+language: de
 pipeline:
-- name: WhitespaceTokenizer
+- name: "SpacyNLP"
+  # language model to load
+  model: "de_core_news_sm"
+  case_sensitive: False
+- name: SpacyTokenizer
+- name: SpacyFeaturizer
+  pooling: "mean"
 - name: RegexFeaturizer
 - name: LexicalSyntacticFeaturizer
 - name: CountVectorsFeaturizer
 - name: CountVectorsFeaturizer
-  analyzer: char_wb
+  analyzer: "char_wb"
   min_ngram: 1
-  max_ngram: 8
+  max_ngram: 4
+- name: DIETClassifier
+  epochs: 100
+- name: EntitySynonymMapper
+- name: ResponseSelector
+  epochs: 100
 - name: DIETClassifier
   epochs: 100
   constrain_similarities: true
@@ -19,3 +30,6 @@ pipeline:
   threshold: 0.3
   ambiguity_threshold: 0.1
 policies:
+  - name: MemoizationPolicy
+  - name: KerasPolicy
+  - name: MappingPolicy
