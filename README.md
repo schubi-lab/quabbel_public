@@ -1,7 +1,7 @@
-# To Start the chatbot
+# To Start quabbel
 
-Need to run in folder:
+Run:
 
 ```
-    rasa x
+    ./start_rasa_quabbel.bat
 ```
