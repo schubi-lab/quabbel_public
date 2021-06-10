@@ -23,6 +23,8 @@ rules:
     - requested_slot: null
   - action: utter_submit_nachweis
 
+
+
 - rule: Wenn die Uebereinstimmung zu niedrig ist.
   steps:
   - intent: nlu_fallback

@@ -39,9 +39,25 @@ intents:
     use_entities: true
 - corona_challenge:
     use_entities: true
+- steuer_challenge:
+    use_entities: true
+- modulbeschreibung_challenge:
+    use_entities: true
+- studiengang_kosten_frage_challenge:
+    use_entities: true
+- waskanstdu_challenge:
+    use_entities: true
+- studiengang_kosten_challenge:
+    use_entities: true
 entities:
 - Studiengang
+- Studiengang_Kosten
 slots:
+  Studiengang_Kosten:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
   Studiengang:
     type: rasa.shared.core.slots.TextSlot
     initial_value: null
@@ -142,6 +158,18 @@ responses:
       - Samstag: in aller Regel keine Besetzung
   utter_corona_regeln:
   - text: Die aktuellen Corona-Regeln finden sie [hier](https://campus.bildungscentrum.de/nfcampus/Node.do?n=6064). Bleiben Sie gesund!
+  utter_studiengang_kosten:
+  - text: Danke für diese Information.
+  utter_studiengang_kosten_frage:
+  - text: Die des Kosten des Studiengangs {Studiengang} liegen bei 10.500€.
+  utter_waskanstdu:
+  - text: |
+      - Ihnen die Kontaktdaten der Studienberatung mitteilen.
+      - Ihnen einen Witz erzählen.
+      - Ihnen bei der Suche nach Modulbeschreibungen helfen.
+      - Ihnen die Durchschnittsnote schicken.
+      - Ihnen beim Thema Studium und Steuern weiterhelfen.
+      - Sie zu den neuesten Corona-Regeln weiterleiten.
 actions:
 - utter_greet
 - utter_submit_nachweis

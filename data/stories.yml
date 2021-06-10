@@ -70,12 +70,10 @@ stories:
   steps:
   - action: utter_modulbeschreibung
   - intent: modulbeschreibung_challenge
-
 - story: Steuerunterlagen
   steps:
-  - action: utter_steuer
   - intent: steuer_challenge
-
+  - action: utter_steuer
 - story: Studiengang_Leitfaden
   steps:
   - action: utter_studiengang
@@ -207,3 +205,13 @@ stories:
   - action: utter_corona_regeln
   - intent: deny
   - action: utter_goodbye
+- story: Studiengang kosten
+  steps:
+  - intent: studiengang_kosten_challenge
+  - action: utter_studiengang_kosten
+  - intent: studiengang_kosten_frage_challenge
+  - action: utter_studiengang_kosten_frage
+- story: was kannst du
+  steps:
+  - intent: waskanstdu_challenge
+  - action: utter_waskanstdu

@@ -117,20 +117,35 @@ nlu:
     - Derzeit studiere ich [IT-Management](Studiengang)
     - Mein Studiengang ist [IT-Management](Studiengang)
     - Ich studiere [IT-Managament](Studiengang)
-
+    - Ich studiere derzeit [IT-Management](Studiengang)
 - intent: steuer_challenge
   examples: |
     - Wo finde ich die steuerwerten Unterlagen meines Studiums?
     - Was kann ich alles von der Steuer absetzen?
     - Kann ich die Studiengebühren von der Steuer absetzen?
-
 - intent: modulbeschreibung_challenge
   examples: |
     - Wo finde ich die Modulbeschreibung zum Model [IT-Management](Studiengang)
     - Ich suche die Modulbeschreibung zum Modul [IT-Management](Studiengang)
     - Ich suche die Beschreibung des Moduls [IT-Management](Studiengang)
     - Ich brauche die die Beschreibum des Moduls [IT-Managament](Studiengang)
-
+    - Wo finde ich die Modulbeschreibung zum Model [IT-Management](Studiengang)?
+    - Wo finde ich die Modulbeschreibung?
+- intent: studiengang_kosten_challenge
+  examples: |
+    - Ich studiere derzeit [IT-Management](Studiengang_Kosten) im Master.
+    - Ich studiere derzeit [IT-Management](Studiengang) im Master
+    - Ich studiere derzeit [Big Dat](Studiengang)a im Master
+    - Im Moment studiere ich[ IT-Management](Studiengang) im Master.
+- intent: studiengang_kosten_frage_challenge
+  examples: |
+    - Wie viel kostet dieser Studiengang nochmal?
+    - Wie viel kostet der Studiengang nochmal?
+- intent: waskanstdu_challenge
+  examples: |
+    - Was kannst du alles?
+    - Wie kannst du mir helfen?
+    - Zu was bist du fähig?
 - intent: room_challenge
   examples: |
     - Ich suche einen Raum
@@ -172,12 +187,15 @@ nlu:
     - Erzähl mir nen Witz
     - erzähl mir nen Witz
     - erzähl mir nen witz
+    - Erzähle mir einen Witz
 - intent: leitfaden_challenge
   examples: |
     - Ich suche meinen Leitfaden
     - Wo finde ich meinen Leitfaden
     - Wo sind meine Leitfäden
     - Ich kann meinen Leitfaden nicht finden
+    - Wo finde ich den Leitfaden zum Studiengang [IT-Management](Studiengang)?
+    - Wo finde ich meinen Leitfaden?
 - intent: notendurschnitt_challenge
   examples: |
     - Welchen Notendurchschnitt habe ich?
@@ -199,6 +217,8 @@ nlu:
     - Die kontaktdaten der Studienberatung
     - Ich brauche die Kontaktdaten der Studienberatung
     - Die Kontaktdaten der Studienberatung
+    - Was sind die Kontaktinformationen der Studienberatung?
+    - Was sind die Kontaktinformationen der Studienberatung
 - intent: nlu_fallback
   examples: |
     - gfd34e5t34rth34554h
@@ -214,6 +234,23 @@ nlu:
     - Wie lange dauern die Klausuren wegen Corona?
     - Wie lange muss ich vor einer Klausur wegen Corona da sein?
 - lookup: Studiengang
+  examples: |
+    - IT-Management
+    - Business Administration
+    - Finance & Banking
+    - International Management
+    - Marketing & Digitale Medien
+    - Management & Digitalisierung
+    - Big Data & Business Analytics
+    - Big Data
+    - IT Management
+    - IT-Management
+    - Gesundheits- und Sozialmanagement
+    - Gesundheitspsychologie & Medizinpädagogik
+    - Pflege & Digitalisierung
+    - Pflegemanagement
+    - Soziale Arbeit
+- lookup: Studiengang_Kosten
   examples: |
     - IT-Management
     - Business Administration
