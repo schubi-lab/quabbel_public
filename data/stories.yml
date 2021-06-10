@@ -32,6 +32,10 @@ stories:
   steps:
   - intent: a_Gebaeude_challenge
   - action: utter_gebaeude_a
+- story: Gebaeude H
+  steps:
+  - intent: h_Gebaeude_challenge
+  - action: utter_gebaeude_h
 - story: Story from Conversation ID ff1697c3434049f2989bc43829e98af4
   steps:
   - intent: greet
@@ -62,7 +66,55 @@ stories:
   - action: utter_gebaeude_a
   - intent: witz_challenge
   - action: utter_witz
-- story: Story from Conversation ID ce7b7eb44eef4b7ead6ea80cc07a89d1
+- story: Studiengang_Leitfaden
   steps:
-  - intent: room_challenge
-  - action: utter_gebaeude_a
+  - action: utter_studiengang
+  - intent: leitfaden_challenge
+- story: Studiengang_Leitfaden
+  steps:
+  - action: utter_studiengang
+  - intent: leitfaden_challenge
+  - intent: studiengang_challenge
+    entities:
+    - Studiengang: IT-Management
+  - action: utter_leitfaden_link
+- story: Story from Conversation ID bb149d839810461db39d134cb44bc8b4
+  steps:
+  - intent: leitfaden_challenge
+  - action: utter_studiengang
+  - slot_was_set:
+    - Studiengang: IT-Managament
+  - intent: studiengang_challenge
+    entities:
+    - Studiengang: IT-Managament
+  - action: utter_leitfaden_link
+- story: Story from Conversation ID eec8382604464e73a41f390e9d191561
+  steps:
+  - intent: leitfaden_challenge
+  - action: utter_studiengang
+  - slot_was_set:
+    - Studiengang: IT-Management
+  - intent: studiengang_challenge
+    entities:
+    - Studiengang: IT-Management
+  - action: utter_leitfaden_link
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: notendurschnitt_challenge
+  - action: Notendurchschnitt_form
+  - active_loop: Notendurchschnitt_form
+  - slot_was_set:
+    - requested_slot: Matrikelnummer
+  - slot_was_set:
+    - Matrikelnummer: '858759'
+  - slot_was_set:
+    - requested_slot: Email
+  - slot_was_set:
+    - Email: schubi.code@tuta.io
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_submit_nachweis

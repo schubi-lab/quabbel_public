@@ -3,24 +3,22 @@ nlu:
 - intent: greet
   examples: |
     - hey
-    - hello
+    - hallo
     - hi
     - hello there
-    - good morning
-    - good evening
-    - moin
-    - hey there
+    - guten morgen
+    - guten nachmittag
+    - servus
+    - Grüß Gut
     - let's go
     - hey dude
-    - goodmorning
-    - goodevening
-    - good afternoon
-    - Hallo
     - Hi
 - intent: goodbye
   examples: |
-    - good afternoon
-    - cu
+    - tschüss
+    - auf wiedersehen
+    - bis bald
+    - gute Nacht
     - good by
     - cee you later
     - good night
@@ -35,7 +33,13 @@ nlu:
   examples: |
     - yes
     - y
-    - indeed
+    - j
+    - Ja
+    - ja
+    - aber sicher
+    - na klar
+    - natürlich
+    - das klingt gut
     - of course
     - that sounds good
     - correct
@@ -44,6 +48,10 @@ nlu:
   examples: |
     - no
     - n
+    - nein
+    - niemals
+    - glaube nicht
+    - nicht wirklich
     - never
     - I don't think so
     - don't like that
@@ -52,9 +60,12 @@ nlu:
     - Danke
 - intent: mood_great
   examples: |
-    - perfect
-    - great
-    - amazing
+    - Perfekt
+    - großartig
+    - wundervoll
+    - ich fühle mich gut
+    - sehr gut
+    - perfekt
     - feeling like a king
     - wonderful
     - I am feeling very good
@@ -68,6 +79,11 @@ nlu:
     - so perfect
 - intent: mood_unhappy
   examples: |
+    - mein Tag war furchtbar
+    - ich bin traurig
+    - sehr traurig
+    - ich bin so traurig
+    - unglücklich
     - my day was horrible
     - I am sad
     - I don't feel very well
@@ -86,11 +102,20 @@ nlu:
     - Sad
 - intent: bot_challenge
   examples: |
+    - bist du ein bot?
+    - bist du ein Mensch?
+    - rede ich mit einem Menschen?
     - are you a bot?
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
     - Bist du ein Bot
+    - Bist du ein Bot?
+- intent: studiengang_challenge
+  examples: |
+    - Ich studiere [IT-Management](Studiengang)
+    - Derzeit studiere ich [IT-Management](Studiengang)
+    - Mein Studiengang ist [IT-Management](Studiengang)
 - intent: room_challenge
   examples: |
     - Ich suche einen Raum
@@ -108,6 +133,15 @@ nlu:
     - Raum A01
     - A10
     - Ich suche Raum A01
+    - Wo finde ich den Raum A01
+    - Im h Gebäude
+    - H-Gebäude
+    - H-Gebaeude
+    - Raum H
+    - Raum H01
+    - H10
+    - Ich suche Raum H01
+    - Wo finde ich den Raum H01
 - intent: witz_challenge
   examples: |
     - Erzähle mir einen Witz.
@@ -119,3 +153,32 @@ nlu:
     - Erzähl mir nen Witz
     - erzähl mir nen Witz
     - erzähl mir nen witz
+- intent: leitfaden_challenge
+  examples: |
+    - Ich suche meinen Leitfaden
+    - Wo finde ich meinen Leitfaden
+    - Wo sind meine Leitfäden
+    - Ich kann meinen Leitfaden nicht finden
+- intent: notendurschnitt_challenge
+  examples: |
+    - Welchen Notendurchschnitt habe ich?
+    - Was ist mein Notendurchschnitt?
+    - Wo finde ich meinen Leistungsnachweis?
+    - Ich will meinen Leistungsnachweis.
+- lookup: Studiengang
+  examples: |
+    - IT-Management
+    - Business Administration
+    - Finance & Banking
+    - International Management
+    - Marketing & Digitale Medien
+    - Management & Digitalisierung
+    - Big Data & Business Analytics
+    - Big Data
+    - IT Management
+    - IT-Management
+    - Gesundheits- und Sozialmanagement
+    - Gesundheitspsychologie & Medizinpädagogik
+    - Pflege & Digitalisierung
+    - Pflegemanagement
+    - Soziale Arbeit

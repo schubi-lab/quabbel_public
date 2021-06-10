@@ -1,58 +1,42 @@
 [
   {
-    "text": "correct",
+    "text": "guten nachmittag",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.994739830493927
+    }
+  },
+  {
+    "text": "auf wiedersehen",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "bot_challenge",
+      "confidence": 0.34860605001449585
+    }
+  },
+  {
+    "text": "das klingt gut",
     "intent": "affirm",
     "intent_prediction": {
       "name": "mood_great",
-      "confidence": 0.9990478157997131
+      "confidence": 0.9342287182807922
     }
   },
   {
-    "text": "wonderful",
+    "text": "ich fühle mich gut",
     "intent": "mood_great",
     "intent_prediction": {
-      "name": "room_challenge",
-      "confidence": 0.44369104504585266
+      "name": "witz_challenge",
+      "confidence": 0.7896745204925537
     }
   },
   {
-    "text": "I am going to save the world",
+    "text": "I am feeling very good",
     "intent": "mood_great",
-    "intent_prediction": {
-      "name": "greet",
-      "confidence": 0.4488745927810669
-    }
-  },
-  {
-    "text": "so good",
-    "intent": "mood_great",
-    "intent_prediction": {
-      "name": "greet",
-      "confidence": 0.4431190490722656
-    }
-  },
-  {
-    "text": "good afternoon",
-    "intent": "goodbye",
-    "intent_prediction": {
-      "name": "greet",
-      "confidence": 0.999958872795105
-    }
-  },
-  {
-    "text": "have a nice day",
-    "intent": "goodbye",
     "intent_prediction": {
       "name": "mood_unhappy",
-      "confidence": 0.9333615303039551
-    }
-  },
-  {
-    "text": "that sounds good",
-    "intent": "affirm",
-    "intent_prediction": {
-      "name": "goodbye",
-      "confidence": 0.4372014105319977
+      "confidence": 0.782685399055481
     }
   },
   {
@@ -60,151 +44,103 @@
     "intent": "mood_great",
     "intent_prediction": {
       "name": "mood_unhappy",
-      "confidence": 0.830707311630249
+      "confidence": 0.855535626411438
+    }
+  },
+  {
+    "text": "mein Tag war furchtbar",
+    "intent": "mood_unhappy",
+    "intent_prediction": {
+      "name": "bot_challenge",
+      "confidence": 0.9915097951889038
+    }
+  },
+  {
+    "text": "Bad",
+    "intent": "mood_unhappy",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.5277518630027771
     }
   },
   {
     "text": "Wo ist der Raum?",
     "intent": "room_challenge",
     "intent_prediction": {
-      "name": "bot_challenge",
-      "confidence": 0.6788089871406555
+      "name": "a_Gebaeude_challenge",
+      "confidence": 0.6109451055526733
     }
   },
   {
-    "text": "Hallo",
+    "text": "hallo",
     "intent": "greet",
     "intent_prediction": {
       "name": "room_challenge",
-      "confidence": 0.9300901889801025
+      "confidence": 0.8412545323371887
     }
   },
   {
-    "text": "indeed",
-    "intent": "affirm",
-    "intent_prediction": {
-      "name": "mood_unhappy",
-      "confidence": 0.763518214225769
-    }
-  },
-  {
-    "text": "never",
-    "intent": "deny",
-    "intent_prediction": {
-      "name": "greet",
-      "confidence": 0.6044949889183044
-    }
-  },
-  {
-    "text": "super stoked",
-    "intent": "mood_great",
-    "intent_prediction": {
-      "name": "mood_unhappy",
-      "confidence": 0.9989961981773376
-    }
-  },
-  {
-    "text": "I don't feel very well",
-    "intent": "mood_unhappy",
-    "intent_prediction": {
-      "name": "mood_great",
-      "confidence": 0.44609901309013367
-    }
-  },
-  {
-    "text": "Raum A",
-    "intent": "a_Gebaeude_challenge",
-    "intent_prediction": {
-      "name": "room_challenge",
-      "confidence": 0.9756937026977539
-    }
-  },
-  {
-    "text": "y",
-    "intent": "affirm",
-    "intent_prediction": {
-      "name": "deny",
-      "confidence": 0.5593430399894714
-    }
-  },
-  {
-    "text": "Bist du ein Bot",
-    "intent": "bot_challenge",
-    "intent_prediction": {
-      "name": "witz_challenge",
-      "confidence": 0.6562080383300781
-    }
-  },
-  {
-    "text": "Ich suche Raum A01",
-    "intent": "a_Gebaeude_challenge",
-    "intent_prediction": {
-      "name": "room_challenge",
-      "confidence": 0.5157459378242493
-    }
-  },
-  {
-    "text": "let's go",
-    "intent": "greet",
-    "intent_prediction": {
-      "name": "mood_great",
-      "confidence": 0.5261343121528625
-    }
-  },
-  {
-    "text": "good afternoon",
-    "intent": "greet",
-    "intent_prediction": {
-      "name": "goodbye",
-      "confidence": 0.9999147653579712
-    }
-  },
-  {
-    "text": "cu",
+    "text": "tschüss",
     "intent": "goodbye",
     "intent_prediction": {
       "name": "affirm",
-      "confidence": 0.9562524557113647
+      "confidence": 0.5467568635940552
     }
   },
   {
     "text": "good night",
     "intent": "goodbye",
     "intent_prediction": {
-      "name": "mood_great",
-      "confidence": 0.6221207976341248
-    }
-  },
-  {
-    "text": "of course",
-    "intent": "affirm",
-    "intent_prediction": {
-      "name": "goodbye",
-      "confidence": 0.5389801263809204
-    }
-  },
-  {
-    "text": "not really",
-    "intent": "deny",
-    "intent_prediction": {
       "name": "mood_unhappy",
-      "confidence": 0.9995673298835754
+      "confidence": 0.46073800325393677
     }
   },
   {
-    "text": "great",
-    "intent": "mood_great",
+    "text": "have a nice day",
+    "intent": "goodbye",
     "intent_prediction": {
       "name": "deny",
-      "confidence": 0.6611761450767517
+      "confidence": 0.465355783700943
     }
   },
   {
-    "text": "my day was horrible",
-    "intent": "mood_unhappy",
+    "text": "na klar",
+    "intent": "affirm",
     "intent_prediction": {
-      "name": "goodbye",
-      "confidence": 0.9458917379379272
+      "name": "deny",
+      "confidence": 0.8171204924583435
+    }
+  },
+  {
+    "text": "natürlich",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.6677089333534241
+    }
+  },
+  {
+    "text": "that sounds good",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "mood_unhappy",
+      "confidence": 0.5435736179351807
+    }
+  },
+  {
+    "text": "sehr gut",
+    "intent": "mood_great",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.6881406307220459
+    }
+  },
+  {
+    "text": "so good",
+    "intent": "mood_great",
+    "intent_prediction": {
+      "name": "mood_unhappy",
+      "confidence": 0.4803747832775116
     }
   },
   {
@@ -212,7 +148,7 @@
     "intent": "mood_unhappy",
     "intent_prediction": {
       "name": "mood_great",
-      "confidence": 0.9456037878990173
+      "confidence": 0.9221086502075195
     }
   },
   {
@@ -220,7 +156,183 @@
     "intent": "room_challenge",
     "intent_prediction": {
       "name": "a_Gebaeude_challenge",
-      "confidence": 0.9973121881484985
+      "confidence": 0.9922619462013245
+    }
+  },
+  {
+    "text": "Grüß Gut",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.9484838247299194
+    }
+  },
+  {
+    "text": "let's go",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.8331263661384583
+    }
+  },
+  {
+    "text": "bis bald",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "mood_unhappy",
+      "confidence": 0.6763781905174255
+    }
+  },
+  {
+    "text": "aber sicher",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "witz_challenge",
+      "confidence": 0.2682139277458191
+    }
+  },
+  {
+    "text": "glaube nicht",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.9438238739967346
+    }
+  },
+  {
+    "text": "nicht wirklich",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.6733912825584412
+    }
+  },
+  {
+    "text": "wundervoll",
+    "intent": "mood_great",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.604095995426178
+    }
+  },
+  {
+    "text": "wonderful",
+    "intent": "mood_great",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.3630029559135437
+    }
+  },
+  {
+    "text": "unglücklich",
+    "intent": "mood_unhappy",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.9976698756217957
+    }
+  },
+  {
+    "text": "my day was horrible",
+    "intent": "mood_unhappy",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.6276353597640991
+    }
+  },
+  {
+    "text": "guten morgen",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.45755982398986816
+    }
+  },
+  {
+    "text": "servus",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.5257001519203186
+    }
+  },
+  {
+    "text": "gute Nacht",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.9721171855926514
+    }
+  },
+  {
+    "text": "correct",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.6492567658424377
+    }
+  },
+  {
+    "text": "not really",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "mood_unhappy",
+      "confidence": 0.9899890422821045
+    }
+  },
+  {
+    "text": "großartig",
+    "intent": "mood_great",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.3282412588596344
+    }
+  },
+  {
+    "text": "Hallo ich suche einen Raum",
+    "intent": "room_challenge",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.4025290906429291
+    }
+  },
+  {
+    "text": "good by",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.483762264251709
+    }
+  },
+  {
+    "text": "n",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.4014755189418793
+    }
+  },
+  {
+    "text": "I am going to save the world",
+    "intent": "mood_great",
+    "intent_prediction": {
+      "name": "mood_unhappy",
+      "confidence": 0.26691174507141113
+    }
+  },
+  {
+    "text": "super stoked",
+    "intent": "mood_great",
+    "intent_prediction": {
+      "name": "mood_unhappy",
+      "confidence": 0.9370007514953613
+    }
+  },
+  {
+    "text": "I don't feel very well",
+    "intent": "mood_unhappy",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.6674261689186096
     }
   }
 ]

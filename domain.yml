@@ -1,32 +1,34 @@
 version: '2.0'
-config:
-  store_entities_as_slots: true
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
-- greet:
-    use_entities: true
-- goodbye:
-    use_entities: true
-- affirm:
-    use_entities: true
-- deny:
-    use_entities: true
-- mood_great:
-    use_entities: true
-- mood_unhappy:
-    use_entities: true
-- bot_challenge:
-    use_entities: true
-- room_challenge:
-    use_entities: true
-- a_Gebaeude_challenge:
-    use_entities: true
-- witz_challenge:
-    use_entities: true
-entities: []
-slots: {}
+- notendurschnitt_challenge
+- affirm
+- goodbye
+- greet
+- deny
+- mood_great
+- mood_unhappy
+- bot_challenge
+- room_challenge
+- a_Gebaeude_challenge
+- witz_challenge
+- h_Gebaeude_challenge
+- studiengang_challenge
+- leitfaden_challenge
+entities:
+- Studiengang
+slots:
+  Studiengang:
+    type: text
+    influence_conversation: true
+  Matrikelnummer:
+    type: text
+    influence_conversation: true
+  Email:
+    type: text
+    influence_conversation: true
 responses:
   utter_greet:
   - text: Hi, ich bin Quabbel. Wie kann ich dir helfen?
@@ -40,10 +42,9 @@ responses:
   utter_goodbye:
   - text: Bis bald :)
   utter_iamabot:
-  - buttons:
-    - payload: mailto:schubi.code@tuta.io
-      title: schubi.code@tuta.io
-    text: Ich bin ein Chatbot names Quabbel. Bei Fragen schreibe doch gerne eine Mail an
+  - text: Ich bin ein Chatbot names Quabbel. Bei Fragen schreibe doch gerne eine Mail an [schubi.code@tuta.io](mailto:schubi.code@tuta.io)
+  utter_studiengang:
+  - text: Was studieren Sie derzeit?
   utter_gebaeude:
   - buttons:
     - payload: H-Gebaeude
@@ -52,11 +53,31 @@ responses:
       title: A-Gebäude
     text: In welchem Gebäude ist der Raum?
   utter_gebaeude_a:
-  - image: http://192.168.178.64:8080/FOM_A_Erdgeschoss.PNG
-    text: Hier ist ein Raumplan :)
+  - image: http://192.168.178.64:8080/FOM_A.PNG
+    text: Hier ist ein Raumplan.
+  utter_gebaeude_h:
+  - image: http://192.168.178.64:8080/FOM_H.PNG
+    text: Hier ist ein Raumplan.
   utter_witz:
   - image: http://192.168.178.64:8080/lol.jpg
     text: '"Liebe Eltern," schreibt der Student, "ich habe schon lange nichts mehr von Euch gehört. Schickt mir doch einen Scheck über 500 Euro, damit ich weiß, dass es Euch gut geht."'
-actions: []
-forms: {}
-e2e_actions: []
+  utter_leitfaden_link:
+  - text: 'Den Leitfaden zum Studiengang {Studiengang} finden Sie unter: [Link](https://campus.bildungscentrum.de/nfcampus/Node.do?n=5827)'
+  utter_ask_Matrikelnummer:
+  - text: Bitte nennen Sie mir hierfür Ihre Matrikelnummer.
+  utter_ask_Email:
+  - text: An welche E-Mail-Adresse soll ich den Leistungsnachweis senden?
+  utter_Notendurchschnitt:
+  - text: Ihren aktuellen Notendurchschnitt können Sie dem Leistungsnachweis entnehmen.
+  utter_submit_nachweis:
+  - text: Der Leistungsnachweis wurde an die E-Mail-Adresse {Email} gesendet.
+actions:
+- utter_greet
+- utter_submit_nachweis
+forms:
+  Notendurchschnitt_form:
+    required_slots:
+      Matrikelnummer:
+      - type: from_text
+      Email:
+      - type: from_text

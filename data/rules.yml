@@ -11,3 +11,20 @@ rules:
   steps:
   - intent: bot_challenge
   - action: utter_iamabot
+
+- rule: Activate form
+  steps:
+  - intent: notendurschnitt_challenge
+  - action: Notendurchschnitt_form
+  - active_loop: Notendurchschnitt_form
+
+
+- rule: Submit form
+  condition:
+  - active_loop: Notendurchschnitt_form
+  steps:
+  - action: Notendurchschnitt_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: utter_submit_nachweis
