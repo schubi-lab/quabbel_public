@@ -1,35 +1,70 @@
 version: '2.0'
+config:
+  store_entities_as_slots: true
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
-- notendurschnitt_challenge
-- affirm
-- goodbye
-- greet
-- deny
-- mood_great
-- mood_unhappy
-- bot_challenge
-- room_challenge
-- a_Gebaeude_challenge
-- witz_challenge
-- h_Gebaeude_challenge
-- studiengang_challenge
-- leitfaden_challenge
+- notendurschnitt_challenge:
+    use_entities: true
+- affirm:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- greet:
+    use_entities: true
+- deny:
+    use_entities: true
+- mood_great:
+    use_entities: true
+- mood_unhappy:
+    use_entities: true
+- bot_challenge:
+    use_entities: true
+- room_challenge:
+    use_entities: true
+- a_Gebaeude_challenge:
+    use_entities: true
+- witz_challenge:
+    use_entities: true
+- h_Gebaeude_challenge:
+    use_entities: true
+- studiengang_challenge:
+    use_entities: true
+- leitfaden_challenge:
+    use_entities: true
+- Studienberatung_challenge:
+    use_entities: true
+- nlu_fallback:
+    use_entities: true
+- corona_challenge:
+    use_entities: true
 entities:
 - Studiengang
 slots:
   Studiengang:
-    type: text
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
     influence_conversation: true
   Matrikelnummer:
-    type: text
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
     influence_conversation: true
   Email:
-    type: text
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
     influence_conversation: true
+  requested_slot:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
 responses:
+  utter_low_confidence:
+  - text: Tut mir Leid, da kann ich leider nocht nicht weiterhelfen. Ich sage meinem Entwickler Bescheid, dass er sich das einmal ansehen soll.
   utter_greet:
   - text: Hi, ich bin Quabbel. Wie kann ich dir helfen?
   utter_cheer_up:
@@ -63,21 +98,59 @@ responses:
     text: '"Liebe Eltern," schreibt der Student, "ich habe schon lange nichts mehr von Euch gehört. Schickt mir doch einen Scheck über 500 Euro, damit ich weiß, dass es Euch gut geht."'
   utter_leitfaden_link:
   - text: 'Den Leitfaden zum Studiengang {Studiengang} finden Sie unter: [Link](https://campus.bildungscentrum.de/nfcampus/Node.do?n=5827)'
+  utter_modulbeschreibung_link:
+  - text: 'Die Modulbeschreibung zum Studiengang {Studiengang} finden Sie unter: [Link](https://campus.bildungscentrum.de/nfcampus/Node.do?n=5827)'
   utter_ask_Matrikelnummer:
-  - text: Bitte nennen Sie mir hierfür Ihre Matrikelnummer.
+  - text: 'Und Ihre Matrikelnummer:'
   utter_ask_Email:
-  - text: An welche E-Mail-Adresse soll ich den Leistungsnachweis senden?
-  utter_Notendurchschnitt:
-  - text: Ihren aktuellen Notendurchschnitt können Sie dem Leistungsnachweis entnehmen.
+  - text: 'Ihren Notendurchschnitt können Sie derzeit nur dem Leistungsnachweis entnehmen. Dafür benötige ich zu erst Ihre E-Mail-Adresse:'
   utter_submit_nachweis:
   - text: Der Leistungsnachweis wurde an die E-Mail-Adresse {Email} gesendet.
+  utter_notendurchschnitt:
+  - text: Ihren Notendurchschnitt können Sie derzeit nur dem Leistungsnachweis entnehmen. Dafür benötige ich folgende Informationen':'
+  utter_steuer:
+  - text: Alles Rund um das Thema Steuern finden sie [hier](https://campus.bildungscentrum.de/nfcampus/Node.do?n=5827).
+  utter_studienberatung:
+  - buttons:
+    - payload: H-Gebaeude
+      title: Tel. 089 202452-20
+    - payload: A-Gebaeude
+      title: studienberatung.muenchen@fom.de
+    text: |-
+      Hier sind die Kontaktdaten/ Öffnungszeiten der Studienberatung.  
+      **Während der Vorlesungszeit:**
+      - Mo-Fr: 09:00-19:00 Uhr
+
+      **vorlesungsfreie Zeit:** 
+
+      - Mo-Fr: 09:00-18:00 Uhr  
+      - Samstag: in aller Regel keine Besetzung
+  utter_low_confidence_studienberatung:
+  - buttons:
+    - payload: H-Gebaeude
+      title: Tel. 089 202452-20
+    - payload: A-Gebaeude
+      title: studienberatung.muenchen@fom.de
+    text: |-
+      Alternativ sind hier die Kontaktdaten/ Öffnungszeiten der Studienberatung.  
+      **Während der Vorlesungszeit:**
+      - Mo-Fr: 09:00-19:00 Uhr
+
+      **vorlesungsfreie Zeit:** 
+
+      - Mo-Fr: 09:00-18:00 Uhr  
+      - Samstag: in aller Regel keine Besetzung
+  utter_corona_regeln:
+  - text: Die aktuellen Corona-Regeln finden sie [hier](https://campus.bildungscentrum.de/nfcampus/Node.do?n=6064). Bleiben Sie gesund!
 actions:
 - utter_greet
 - utter_submit_nachweis
 forms:
   Notendurchschnitt_form:
+    action: utter_notendurchschnitt
     required_slots:
-      Matrikelnummer:
-      - type: from_text
       Email:
       - type: from_text
+      Matrikelnummer:
+      - type: from_text
+e2e_actions: []

@@ -116,6 +116,21 @@ nlu:
     - Ich studiere [IT-Management](Studiengang)
     - Derzeit studiere ich [IT-Management](Studiengang)
     - Mein Studiengang ist [IT-Management](Studiengang)
+    - Ich studiere [IT-Managament](Studiengang)
+
+- intent: steuer_challenge
+  examples: |
+    - Wo finde ich die steuerwerten Unterlagen meines Studiums?
+    - Was kann ich alles von der Steuer absetzen?
+    - Kann ich die Studiengebühren von der Steuer absetzen?
+
+- intent: modulbeschreibung_challenge
+  examples: |
+    - Wo finde ich die Modulbeschreibung zum Model [IT-Management](Studiengang)
+    - Ich suche die Modulbeschreibung zum Modul [IT-Management](Studiengang)
+    - Ich suche die Beschreibung des Moduls [IT-Management](Studiengang)
+    - Ich brauche die die Beschreibum des Moduls [IT-Managament](Studiengang)
+
 - intent: room_challenge
   examples: |
     - Ich suche einen Raum
@@ -123,6 +138,8 @@ nlu:
     - Raum
     - Raumsuche
     - Hallo ich suche einen Raum
+    - ich suche noch nen raum
+    - ich suche nen raum
 - intent: a_Gebaeude_challenge
   examples: |
     - A Gebaeude
@@ -134,6 +151,8 @@ nlu:
     - A10
     - Ich suche Raum A01
     - Wo finde ich den Raum A01
+- intent: h_Gebaeude_challenge
+  examples: |
     - Im h Gebäude
     - H-Gebäude
     - H-Gebaeude
@@ -165,6 +184,35 @@ nlu:
     - Was ist mein Notendurchschnitt?
     - Wo finde ich meinen Leistungsnachweis?
     - Ich will meinen Leistungsnachweis.
+    - Was ist mein Notendurschnitt?
+    - Was ist mein Notendurchschnitt
+    - Ich brauche meinen Notendurchschnitt
+    - Was ist mein Notendurchscnitt?
+- intent: Studienberatung_challenge
+  examples: |
+    - Wie erreiche ich die Studienberatung
+    - Kontaktdaten der Studienberatung
+    - Studienberatung
+    - Telefonnummer der Studienberatung
+    - Mail der Studienberatung
+    - Öffnungszeiten Studienberatung
+    - Die kontaktdaten der Studienberatung
+    - Ich brauche die Kontaktdaten der Studienberatung
+    - Die Kontaktdaten der Studienberatung
+- intent: nlu_fallback
+  examples: |
+    - gfd34e5t34rth34554h
+    - aergergeargear
+    - aergergerageraerg
+    - oearihgelrignfdlkgjergregae
+    - uvaä546opb45bä45b45
+    - 567j3567jn5637m3576
+- intent: corona_challenge
+  examples: |
+    - Wo finde ich die aktuellen Corona Regeln?
+    - Was muss ich wegen Corona beachten?
+    - Wie lange dauern die Klausuren wegen Corona?
+    - Wie lange muss ich vor einer Klausur wegen Corona da sein?
 - lookup: Studiengang
   examples: |
     - IT-Management

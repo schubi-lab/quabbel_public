@@ -66,6 +66,16 @@ stories:
   - action: utter_gebaeude_a
   - intent: witz_challenge
   - action: utter_witz
+- story: Studiengang_Modulbeschreibung
+  steps:
+  - action: utter_modulbeschreibung
+  - intent: modulbeschreibung_challenge
+
+- story: Steuerunterlagen
+  steps:
+  - action: utter_steuer
+  - intent: steuer_challenge
+
 - story: Studiengang_Leitfaden
   steps:
   - action: utter_studiengang
@@ -98,8 +108,7 @@ stories:
     entities:
     - Studiengang: IT-Management
   - action: utter_leitfaden_link
-
-- story: interactive_story_1
+- story: notendurchschnitt
   steps:
   - intent: greet
   - action: utter_greet
@@ -118,3 +127,83 @@ stories:
     - requested_slot: null
   - active_loop: null
   - action: utter_submit_nachweis
+- story: Story from Conversation ID 2957c42eba344e66b94934ab21c9bb12
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: notendurschnitt_challenge
+  - action: Notendurchschnitt_form
+  - active_loop: Notendurchschnitt_form
+  - slot_was_set:
+    - requested_slot: Email
+  - intent: mood_great
+  - action: Notendurchschnitt_form
+  - slot_was_set:
+    - Email: fweoif@fwef.de
+  - intent: affirm
+  - action: Notendurchschnitt_form
+  - active_loop: null
+  - slot_was_set:
+    - Matrikelnummer: '324235'
+  - action: utter_submit_nachweis
+- story: Story from Conversation ID d455282b4f204cf086d55a5d5a65f3be
+  steps:
+  - intent: Studienberatung_challenge
+  - action: utter_studienberatung
+- story: Story from Conversation ID c6ac10fc365c48339058849c4b2fb3ad
+  steps:
+  - intent: room_challenge
+  - action: utter_gebaeude
+  - intent: h_Gebaeude_challenge
+  - action: utter_gebaeude_h
+- story: Story from Conversation ID d99f91ec863b497ba55bd360c0f36b27
+  steps:
+  - intent: nlu_fallback
+  - action: utter_low_confidence
+- story: Corona Regeln
+  steps:
+  - intent: corona_challenge
+  - action: utter_corona_regeln
+- story: Story from Conversation ID 1ff671da33144fb1b0a069dc8448cb7c
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: Studienberatung_challenge
+  - action: utter_studienberatung
+  - intent: room_challenge
+  - action: utter_gebaeude
+  - intent: a_Gebaeude_challenge
+  - action: utter_gebaeude_a
+  - intent: bot_challenge
+  - action: utter_iamabot
+  - intent: nlu_fallback
+  - action: utter_low_confidence
+  - intent: witz_challenge
+  - action: utter_witz
+  - intent: notendurschnitt_challenge
+  - action: Notendurchschnitt_form
+  - active_loop: Notendurchschnitt_form
+  - slot_was_set:
+    - requested_slot: Email
+  - intent: mood_great
+  - action: Notendurchschnitt_form
+  - slot_was_set:
+    - Email: felix.schubert@tuta.io
+  - intent: nlu_fallback
+  - action: Notendurchschnitt_form
+  - active_loop: null
+  - slot_was_set:
+    - Matrikelnummer: '462041'
+  - action: utter_submit_nachweis
+  - intent: leitfaden_challenge
+  - action: utter_studiengang
+  - slot_was_set:
+    - Studiengang: IT-Management
+  - intent: studiengang_challenge
+    entities:
+    - Studiengang: IT-Management
+  - action: utter_leitfaden_link
+  - intent: corona_challenge
+  - action: utter_corona_regeln
+  - intent: deny
+  - action: utter_goodbye
