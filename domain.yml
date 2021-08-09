@@ -63,6 +63,11 @@ slots:
     initial_value: null
     auto_fill: true
     influence_conversation: true
+  Name:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
   Matrikelnummer:
     type: rasa.shared.core.slots.TextSlot
     initial_value: null
